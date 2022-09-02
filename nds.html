@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+
+<head>
+   
+  
+    <title>NDS </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<Html>   
+<style>
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 12px;
+}
+.dropdown {
+    display: inline-block;
+    position: relative
+}
+.dropdown-content {
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    display: none;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: orange;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: grey;
+}
+</style>
+
+<Body> 
+    <button onclick="function2()">test</button>
+CLick For dropdown <br>
+<div class="dropdown">
+<button class="dropbtn"> Rom Options</button>
+<div class="dropdown-content">
+<a href="mario64.nds" download>Mario64</a>
+<a href="Pokemon Black 2 Extreme Randomized 2.nds" download>Pokemon Black 2 Extreme Randomized </a>
+
+</div>
+</div>
+</Body> 
+</Html>
+<Body style="style.css;">
+    <desmond-player></desmond-player>
+    <input type="file" style="position: absolute; transform: translate(-100%, -100%); left: 100%; top: 95%; color: white;">
+  <script src="https://cdn.jsdelivr.net/gh/Unzor/desmond/cdn/desmond.min.js"></script>
+    <script>
+        document.querySelector("input").onchange = function() {
+            document.querySelector("desmond-player").loadURL(URL.createObjectURL(document.querySelector("input").files[0]))
+        }
+      
+        window.onload = function() {
+            setTimeout(function() {
+              
+                document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -50%);width: 35%;left: 50%;top: 25%;height: 50%;";
+
+                document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -50%);width: 35%;left: 50%;top: 75%;height: 50%;";
+            }, 1000)
+        }
+                       
+               function function2() {
+                                   document.querySelector("desmond-player").loadURL("bi2.nds")
+
+               };
+        
+     </script>
+   
+</body>
+</html>
