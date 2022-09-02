@@ -45,7 +45,9 @@
 </style>
 
 <Body> 
-    <button onclick="function2()">test</button>
+    <button onclick="function2()">Play mario 64 ds</button>
+   <button onclick="function3()">Play [game] ds</button>
+   <!-- go to the script below  and change the load rom on function 3 for your rom -->
 CLick For dropdown <br>
 <div class="dropdown">
 <button class="dropbtn"> Rom Options</button>
@@ -77,6 +79,10 @@ CLick For dropdown <br>
                        
                function function2() {
                                    document.querySelector("desmond-player").loadURL("mario64.nds")
+
+               };
+       function function3() {
+                                   document.querySelector("desmond-player").loadURL("yourrom.nds")
 
                };
         
