@@ -68,7 +68,7 @@ CLick For dropdown <br>
       
         window.onload = function() {
             setTimeout(function() {
-              
+              document.querySelector("desmond-player").loadURL("../mario64.nds")
                 document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -50%);width: 35%;left: 50%;top: 25%;height: 50%;";
 
                 document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -50%);width: 35%;left: 50%;top: 75%;height: 50%;";
